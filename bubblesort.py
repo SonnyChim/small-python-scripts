@@ -20,7 +20,7 @@ def bar():
             else:
                 line = line + "  "
         bargraph += line + "\n"
-    os.system("cls")
+    os.system("cls" if os.name == "nt" else "clear")
     print(bargraph)
     #     bargraph.append(line)
     # os.system("cls")
@@ -41,5 +41,4 @@ for i in range(amount-1):
     if sorted:
         break
 
-print(nums)
 bar()
