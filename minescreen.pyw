@@ -4,7 +4,7 @@ import pyautogui as pa
 
 img = pa.screenshot()
 img = cv.cvtColor(np.array(img), cv.COLOR_RGB2BGR)
-cv.namedWindow("screen",cv.WINDOW_NORMAL)
+cv.namedWindow("screen",cv.WINDOW_NORMAL | cv.WINDOW_GUI_NORMAL)
 cv.setWindowProperty("screen",cv.WND_PROP_FULLSCREEN,cv.WINDOW_FULLSCREEN)
 cv.imshow("screen",img)
 breakanim = []
